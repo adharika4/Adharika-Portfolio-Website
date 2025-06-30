@@ -1,0 +1,402 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  nav {
+  display: flex;
+  justify-content: flex-end; /* Keep items aligned right */
+  background-color: #fdfdfd; /* Off-white background */
+  padding: 1rem 5rem 1rem 2rem; /* Increased left padding to move navbar slightly left */
+  gap: 3rem; /* Increased spacing between navbar links */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  font-size: 1rem;
+  padding-bottom: 4px;
+  letter-spacing: 1px; /* Adds space between letters */
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: darkblue;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+#home {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  text-align: left;
+}
+
+.home-text h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.resume-button {
+  background-color: rgb(89, 89, 251);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #000066;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.home-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #104be1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ABOUT SECTION STYLING */
+#about {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.underline-heading {
+  border-bottom: 3px solid rgb(43, 43, 253);
+  color: #250be9;
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+.about-content img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+  flex: 1;
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+#skills {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.underline {
+  border-bottom: 3px solid rgb(43, 43, 253);
+  padding-bottom: 4px;
+  color: #250be9;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.skills-left {
+  flex: 1;
+}
+
+.skills-left h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.skill-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.skills-right {
+  flex: 1;
+  text-align: center;
+}
+
+.skills-right img {
+  max-width: 80%;       
+  height: auto;
+  border-radius: 10px;
+  margin-top: 5rem;  
+  
+}
+/* === Projects Section Styling === */
+#projects {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.2rem;
+  color: #104be1;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+#projects h2::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: #0056d2;
+  margin: 0.4rem auto 0;
+  border-radius: 2px;
+}
+
+/* Each Project Box */
+.project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  color: #0a0b0b;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.project p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.project ul {
+  padding-left: 1.2rem;
+  color: #333;
+}
+
+.project ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* === Contact Section Styling === */
+#contact {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.2rem;
+  color: #180edd;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+#contact h2::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: #0056d2; /* dark blue underline */
+  margin: 0.4rem auto 0;
+  border-radius: 2px;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Center the form */
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Style inputs and textarea */
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+#contact button {
+  background-color: #0056d2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #003f9a;
+}
+
+footer {
+  background-color: #0b1120; /* dark navy blue */
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer div p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #4c8bf5; /* hover color */
+}
+
+footer p {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+  
+  
+
